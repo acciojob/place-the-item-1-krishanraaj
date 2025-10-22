@@ -1,19 +1,19 @@
 .holder {
-  display: flex;                 /* Flex container */
-  justify-content: space-between;/* First and last items touch edges */
-  flex-wrap: wrap;               /* Wrap to next row if needed */
-  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;          /* allow new rows */
+  justify-content: flex-start; 
+  padding: 0;               /* edges touch screen */
+  gap: 10px;                /* space between items */
+  box-sizing: border-box;
 }
 
 .item {
-  flex: 0 1 100px;               /* Prevent squashing, allow wrapping */
-  min-width: 100px;              /* Minimum width so items stay visible */
-  margin: 5px 0;
+  flex: 0 1 100px;          /* prevent squashing, base width */
+  min-width: 100px;         /* ensures wrapping instead of shrinking too small */
   padding: 20px;
   background-color: #4caf50;
   color: white;
   text-align: center;
   font-weight: bold;
   border-radius: 6px;
-  box-sizing: border-box;
 }
