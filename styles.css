@@ -1,18 +1,30 @@
 /* Flex container */
 .holder {
-  display: flex;                /* required by test */
-  justify-content: space-between; /* required by test */
-  flex-wrap: wrap;              /* required by test */
+  display: flex;                    /* Flexbox enabled */
+  flex-direction: row;              /* Arrange items in a row */
+  justify-content: space-between;   /* First and last items touch edges, space between others */
+  flex-wrap: wrap;                  /* Wrap items to next row if needed */
+  padding: 10px;
+  background-color: #f2f2f2;
 }
 
-/* Item styling (not checked by test but looks better) */
+/* Individual items */
 .item {
+  flex: 0 1 120px;                  /* Don’t squash, base width 120px */
+  min-width: 100px;                 /* Minimum width to avoid squashing */
+  text-align: center;
+  margin: 10px 0;                   /* Vertical spacing between wrapped rows */
+  padding: 20px;
   background-color: #4caf50;
   color: white;
   font-weight: bold;
-  padding: 20px;
-  margin: 10px 0;
-  text-align: center;
-  border-radius: 6px;
-  flex: 0 1 auto;
+  font-size: 20px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+
+/* Optional: hover effect */
+.item:hover {
+  transform: scale(1.05);
 }
