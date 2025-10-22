@@ -1,2 +1,22 @@
+/* Container styling */
+.holder {
+  display: flex;                 /* Enable flexbox */
+  flex-direction: row;           /* Items arranged in a row */
+  justify-content: space-between;/* Space between items, edges touch screen */
+  flex-wrap: wrap;               /* Wrap to next row if needed */
+  padding: 10px;
+  background-color: #f8f8f8;
+}
 
-/* Your CSS Code here. */
+/* Item styling */
+.item {
+  flex: 0 1 auto;                /* Prevent squashing */
+  min-width: 100px;              /* Maintain width for each item */
+  text-align: center;
+  padding: 20px;
+  margin: 5px 0;
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+}
