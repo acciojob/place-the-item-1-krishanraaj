@@ -1,15 +1,16 @@
 .holder {
-  display: flex;
-  flex-wrap: wrap;                /* allow items to wrap to next row */
-  justify-content: space-between; /* first/last items touch edges */
+  display: flex;                  /* Must be flex for Cypress */
+  flex-wrap: wrap;                /* Allow new rows */
+  justify-content: space-between; /* First/last items touch edges */
   width: 100%;
   box-sizing: border-box;
+  padding: 0;
 }
 
 .item {
-  flex: 0 1 100px;  /* base width, prevent squashing */
-  min-width: 100px; /* ensures wrapping instead of shrinking */
-  margin-bottom: 10px; /* vertical spacing between rows */
+  flex: 0 1 100px;   /* Base width, prevents squashing */
+  min-width: 100px;  /* Ensures wrapping instead of shrinking too small */
+  margin-bottom: 10px; 
   padding: 20px;
   text-align: center;
   background-color: #4caf50;
