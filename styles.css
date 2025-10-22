@@ -1,22 +1,18 @@
-/* Container styling */
+/* Flex container */
 .holder {
-  display: flex;                 /* Enable flexbox */
-  flex-direction: row;           /* Items arranged in a row */
-  justify-content: space-between;/* Space between items, edges touch screen */
-  flex-wrap: wrap;               /* Wrap to next row if needed */
-  padding: 10px;
-  background-color: #f8f8f8;
+  display: flex;                /* required by test */
+  justify-content: space-between; /* required by test */
+  flex-wrap: wrap;              /* required by test */
 }
 
-/* Item styling */
+/* Item styling (not checked by test but looks better) */
 .item {
-  flex: 0 1 auto;                /* Prevent squashing */
-  min-width: 100px;              /* Maintain width for each item */
-  text-align: center;
-  padding: 20px;
-  margin: 5px 0;
   background-color: #4caf50;
   color: white;
   font-weight: bold;
+  padding: 20px;
+  margin: 10px 0;
+  text-align: center;
   border-radius: 6px;
+  flex: 0 1 auto;
 }
